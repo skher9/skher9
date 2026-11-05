@@ -1,30 +1,35 @@
 ## Hi there 👋
 
-I'm Shravani, a senior fullstack engineer working across React/TypeScript on the front and Node/NestJS with PostgreSQL on the back. Most of my work involves making messy domain data trustworthy enough that someone will act on it.
+I'm Shravani, a Full-Stack + AI Engineer. I build production AI agents end to end with LangGraph and LangChain in Python, on NestJS and PostgreSQL backends with React frontends.
 
-- 🔭 **I'm currently working on** core product at Flywl, a multi-cloud marketplace platform
-- 🌱 **I'm currently going deeper on** distributed systems design and backend architecture at scale
-- 👯 **I'm looking to collaborate on** developer tooling, especially things that make the tedious parts of engineering smaller
-- 💬 **Ask me about** NestJS API design, React performance, or building agents over real production data
+I care about the unglamorous parts that make agents reliable: evals, guardrails, cost control, and recovering from failure.
+
+- 🔭 **I'm currently building** a multi-agent system that turns Jira tickets into reviewed GitHub pull requests
+- 💬 **Ask me about** agent orchestration, evals for LLM systems, NestJS API design, or React performance
 - ✍️ **I write** about system design and engineering practice on [Medium](https://medium.com/@skher3318)
-- 📫 **How to reach me:** shravanikher9@gmail.com · [LinkedIn](https://www.linkedin.com/in/)
+- 🌍 **Open to** remote roles in AI engineering and full-stack + AI
+- 📫 **How to reach me:** shravanikher9@gmail.com · [LinkedIn](https://www.linkedin.com/in/shravani-kher-0875281b6/)
 
 ---
 
 ### Things I've built
 
-**An insight agent over multi-cloud billing data.** Triggers when a cost usage file lands in S3, compares current and prior periods to flag overage, spend spikes, and under-utilised reserved instances and savings plans, then projects run-rate against commitment and recommends action.
+**Multi-Agent Dev Team (personal project).** AI agents that read a Jira ticket, plan the work, write the code and tests in a sandbox, review it, and open a pull request. Built on a LangGraph pipeline with Postgres checkpoints, a code map that finds the files a ticket touches, a verify step (lint, typecheck, tests, secret scan), and golden-ticket evals. A full run costs about ₹9.46 (~$0.11).
 
-**Enterprise commitment and overage tracking.** Designed the PostgreSQL data model and built the NestJS services computing commitment burn-down, with real-time spend analytics aggregating usage across AWS, Azure, and GCP.
+**A natural-language workflow agent.** Users describe a process in plain words, and a LangGraph agent plans the steps, picks integrations and tools, and generates an executable workflow for review. Per-user integration auth, structured outputs, guardrails on every step, and prompt caching. Holds a ~84% eval pass rate.
 
-**An AI-assisted event tracking system.** PMs tag @Cursor in Slack with an event spec, which runs against a custom runbook and event dictionary I wrote to generate instrumentation code and raise a PR, removing engineering from the instrumentation loop.
+**An insight agent over multi-cloud billing data.** Triggers when a cost usage file lands in S3, compares current and prior periods to flag overage, spend spikes, and under-used reserved instances and savings plans, then projects run-rate against commitment and recommends action.
 
-**A custom tagging system for an EHR platform.** Evaluated third-party options, found they were incompatible with the module architecture, and built the custom path across the NestJS API and React interface. Now core workflow across 1,200+ US facilities.
+**Enterprise commitment and overage tracking.** Designed the PostgreSQL data model and built the NestJS services for commitment burn-down, with real-time spend analytics across AWS, Azure, and GCP.
 
-**Billing and insurance claim APIs.** NestJS REST services for clinical billing workflows, where the data contracts had to hold up against real financial and regulatory complexity.
+**An AI-assisted event tracking system.** PMs tag @Cursor in Slack with an event spec. It runs against a custom runbook and event dictionary I wrote, generates the instrumentation code, and raises a PR, so engineers are no longer needed in that loop.
 
-**A ~30% dashboard performance improvement.** Profiling across API and client: payload reduction, re-render elimination, code splitting, memoization, and bundle optimisation.
+**A custom tagging system for an EHR platform.** Third-party options didn't fit the module architecture, so I built a custom one across the NestJS API and React interface. It is now a core workflow across 1,200+ US facilities.
+
+**Performance work.** Designed 10+ NestJS and PostgreSQL REST APIs with role-based access control, cutting average response time from ~340ms to under 100ms through query optimisation and caching. Cut frontend page load from ~4s to under 2s and bundle size by ~35% through render optimisation, code splitting, and memoization.
 
 ---
 
-**Stack:** TypeScript · React · Next.js · Node.js · NestJS · PostgreSQL · Redis · GraphQL
+**AI:** Python · LangGraph · LangChain · LLM evals · RAG · Prompt engineering · FastAPI
+
+**Full-stack:** TypeScript · React · Next.js · Node.js · NestJS · PostgreSQL · Redis · GraphQL · Docker
